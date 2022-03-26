@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./icons/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="./icons/favicon/site.webmanifest" />
+		<link rel="mask-icon" href="./icons/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#00aba9" />
+		<meta name="theme-color" content="#ffffff" />
+		<title>Windows 98 SE</title>
+	</head>
+	<body>
+		<main class="desktop">
+			<div class="icons uncopied-text">
+				<div class="icon">
+					<div class="icon-body">
+						<img src="./icons/my-pc.ico" title="Here are all the files of your computer" alt="My computer" />
+						<span>My Computer</span>
+					</div>
+					<ul class="context-menu window uncopied-text">
+						<li>Open</li>
+						<li>Device manager</li>
+						<li>Properties</li>
+					</ul>
+				</div>
+				<div class="icon">
+					<div class="icon-body">
+						<img src="./icons/trash.ico" title="Here are your deleted files" alt="Recycle bin" />
+						<span>Recycle Bin</span>
+					</div>
+					<ul class="context-menu window uncopied-text">
+						<li>Open</li>
+						<li>Empty Recycle Bin</li>
+						<li>Properties</li>
+					</ul>
+				</div>
+				<div class="icon app-ie">
+					<div class="icon-body">
+						<img src="./icons/ie.ico" title="Enter to the Internet" alt="Microsoft Internet Explorer 6" />
+						<span>Internet Explorer</span>
+					</div>
+					<ul class="context-menu window uncopied-text">
+						<li>Open</li>
+						<li>Google</li>
+						<li>Wikipedia</li>
+						<li>Properties</li>
+					</ul>
+				</div>
+				<div class="icon app-fifteen">
+					<div class="icon-body">
+						<img src="./icons/fifteen.png" title="Just a puzzle game" alt="Puzzle game" />
+						<span>The 15 game</span>
+					</div>
+					<ul class="context-menu window uncopied-text">
+						<li>Open</li>
+						<li>Properties</li>
+					</ul>
+				</div>
+			</div>
+			<div class="apps">
+				<div class="app-window window internet-explorer-window">
+					<div class="window-header uncopied-text">
+						<div class="window-title">
+							<img src="icons/wikipedia.ico" alt="wikipedia-logo" /> <span>Wikipedia, the free encyclopedia</span>
+						</div>
+						<div class="window-btns">
+							<div class="btn">_</div>
+							<div class="btn">Ο</div>
+							<div class="btn close">X</div>
+						</div>
+					</div>
+					<iframe id="frame" name="frame" width="100%" height="100%"></iframe>
+				</div>
+				<div class="app-window the-fifteen-game-window window">
+					<div class="window-header uncopied-text">
+						<div class="window-title">
+							<img src="icons/fifteen.png" alt="fifteen-logo" /> <span>The 15 puzzle game</span>
+						</div>
+						<div class="window-btns">
+							<div class="btn">_</div>
+							<div class="btn">Ο</div>
+							<div class="btn close">X</div>
+						</div>
+					</div>
+					<div class="fifteen">
+						<audio src="./sound/click.mp3"></audio>
+						<div class="fifteen__header">
+							<div class="fifteen__navbar">
+								<div class="fifteen__btns">
+									<div class="fifteen__new btn" title="New Game">New</div>
+									<div class="fifteen__reload btn" title="Reload Game">
+										<img src="./icons/fifteen/reload.svg" alt="reload" />
+									</div>
+									<div class="fifteen__muted btn" title="Sound ON/OFF">
+										<img src="./icons/fifteen/sound.svg" alt="on" />
+									</div>
+								</div>
+								<div class="fifteen__timer" title="Game Timer">
+									<div class="fifteen__min">00</div>
+									:
+									<div class="fifteen__sec">00</div>
+								</div>
+								<span class="fifteen__info btn" title="Game rules"
+									><img src="./icons/fifteen/info.svg" alt="info"
+								/></span>
+								<div class="fifteen__value" title="Moves Counter">
+									<p>Moves:</p>
+									<span>0</span>
+								</div>
+							</div>
+							<p class="fifteen__rules">
+								<strong>The goal of the game</strong> is to move the items around the box to arrange them by numbers,
+								preferably by making as few movements as possible.
+							</p>
+						</div>
+						<div class="fifteen__board"></div>
+						<script src="./js/fifteen.js"></script>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="taskbar window uncopied-text">
+			<button class="start btn"><img src="icons/windows-logo.png" alt="logo" /><b>Start</b></button>
+			<div class="time" title="Current time"></div>
+		</footer>
+		<script src="./js/script.js"></script>
+	</body>
+</html>
