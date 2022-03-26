@@ -13,6 +13,7 @@ body {
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
+	overflow-x: hidden;
 }
 .desktop {
 	flex: 1 1 auto;
@@ -117,19 +118,16 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(3000px, 0) scale(0);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	opacity: 0;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+	width: 75%;
+	height: 75%;
+	transition: 0.5s;
 	&.active {
-		width: 75%;
-		height: 75%;
-		opacity: 1;
-		visibility: visible;
+		transition: 0.5s;
+		transform: translate(-50%, -50%) scale(1);
 	}
 }
 .app-window {
@@ -147,6 +145,7 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition: 0.5s;
 }
 // TECHNIC STYLES CLASSES
 .window {
