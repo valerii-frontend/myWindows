@@ -23,6 +23,8 @@ document.addEventListener("click", (e) => {
 });
 // icons
 let icons = document.querySelectorAll(".icon");
+let apps = document.querySelector(".apps");
+
 icons.forEach((icon) => {
 	icon.addEventListener("contextmenu", (e) => {
 		let allOpen = document.querySelectorAll(".open");
@@ -30,7 +32,7 @@ icons.forEach((icon) => {
 		let cm = icon.querySelector(".context-menu");
 		if (cm) cm.classList.add("open");
 	});
-	icon.addEventListener("dblclick", (e) => {
+	icon.addEventListener("click", (e) => {
 		let findSelected = document.querySelectorAll(".selected");
 		findSelected.forEach((element) => element.classList.remove("selected"));
 		icon.classList.add("selected");
@@ -39,10 +41,13 @@ icons.forEach((icon) => {
 			let iframe = ie.querySelector("iframe");
 			let url = iframe.getAttribute("src");
 			if (!url) iframe.setAttribute("src", "https://en.wikipedia.com");
+			apps.classList.add("active");
 			ie.classList.add("active");
 		} else if (icon.classList.contains("app-fifteen")) {
 			let fifteenGame = document.querySelector(".the-fifteen-game-window");
+			apps.classList.add("active");
 			fifteenGame.classList.add("active");
+			startGame();
 		}
 	});
 });
@@ -50,6 +55,7 @@ icons.forEach((icon) => {
 document.addEventListener("click", function (e) {
 	if (e.target.classList.contains("close")) {
 		e.target.closest(".window").classList.remove("active");
+		apps.classList.remove("active");
 		clearInterval(time.timerID);
 		time.timerID = null;
 	}

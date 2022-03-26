@@ -182,10 +182,6 @@ function startGame() {
 	}, 1000);
 }
 // ===========================================================================================
-window.addEventListener("dblclick", (e) => {
-	if (e.target.classList.contains("app-fifteen")) startGame();
-});
-// ===========================================================================================
 // BUTTONS EVENTS
 // NEW
 buttons.newGame.addEventListener("click", startGame);
