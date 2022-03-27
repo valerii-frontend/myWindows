@@ -154,7 +154,7 @@
 		z-index: 2;
 		opacity: 0.7;
 		transition: 0.15s ease;
-		color: #7a88b2;
+		color: #242e4f;
 		background-color: var(--main-color);
 		border-top: 3px solid #fff;
 		border-left: 3px solid #fff;
@@ -177,11 +177,12 @@
 			}
 		}
 		&.place {
-			color: #242e4f;
 			opacity: 1;
-			background: rgba(173, 255, 157, 0.8);
+			// background: rgba(173, 255, 157, 0.8);
+			color: silver;
+			background: #007400;
 		}
-		&.win:after {
+		&.win {
 			animation: win 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 		}
 	}
@@ -200,25 +201,29 @@
 		animation: popUp 1s ease-in-out 1 forwards;
 		font-size: 24px;
 		font-weight: 700;
-		color: #f0f2f7;
+		color: #000000;
 		z-index: 3;
 		text-align: center;
-		border: 8px solid rgba(255, 255, 255, 0.5);
+		border-top: 2px solid #fff;
+		border-left: 2px solid #fff;
+		border-right: 2px solid gray;
+		border-bottom: 2px solid gray;
+		box-shadow: inset 1px 1px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px #000;
 
 		&_win {
-			background-color: #cf8f57;
+			background-color: silver;
 		}
 		span {
 			margin-bottom: 10px;
 		}
 		&__string {
-			color: #feffaa;
+			color: blue;
 		}
 		&__time {
-			color: #007400;
+			color: brown;
 		}
 		&__score {
-			color: rgb(59, 144, 255);
+			color: blueviolet;
 			font-size: 2rem;
 		}
 	}
@@ -236,16 +241,16 @@
 }
 @keyframes win {
 	from {
-		background: rgba(112, 0, 134, 0.2);
-		transform: scale(1) translate(-50%, -50%);
+		background: tomato;
+		transform: scale(1);
 	}
 	70% {
-		background: rgba(13, 0, 134, 0.562);
-		transform: scale(1) translate(-50%, -50%);
+		background: slateblue;
+		transform: scale(1);
 	}
 	to {
-		transform: scale(1.15) translate(-50%, -50%);
-		background: rgba(102, 255, 0, 0.3);
+		transform: scale(1.15);
+		background: springgreen;
 	}
 }
 

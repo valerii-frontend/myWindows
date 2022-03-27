@@ -39,50 +39,50 @@
 						<li>Properties</li>
 					</ul>
 				</div>
-				<div class="icon app-ie">
+				<div data-icon="0" class="icon">
 					<div class="icon-body">
 						<img src="./icons/ie.ico" title="Enter to the Internet" alt="Microsoft Internet Explorer 6" />
 						<span>Internet Explorer</span>
 					</div>
 					<ul class="context-menu window uncopied-text">
-						<li>Open</li>
+						<li data-open-id="0">Open</li>
 						<li>Google</li>
 						<li>Wikipedia</li>
 						<li>Properties</li>
 					</ul>
 				</div>
-				<div class="icon app-fifteen">
+				<div data-icon="1" class="icon">
 					<div class="icon-body">
 						<img src="./icons/fifteen.png" title="Just a puzzle game" alt="Puzzle game" />
 						<span>The 15 game</span>
 					</div>
 					<ul class="context-menu window uncopied-text">
-						<li>Open</li>
+						<li data-open-id="1">Open</li>
 						<li>Properties</li>
 					</ul>
 				</div>
 			</div>
 			<div class="apps">
-				<div class="app-window window internet-explorer-window">
+				<div id="0" class="app-window window internet-explorer-window">
 					<div class="window-header uncopied-text">
 						<div class="window-title">
 							<img src="icons/wikipedia.ico" alt="wikipedia-logo" /> <span>Wikipedia, the free encyclopedia</span>
 						</div>
 						<div class="window-btns">
-							<div class="btn">_</div>
+							<div class="btn minimize">_</div>
 							<div class="btn">Ο</div>
 							<div class="btn close">X</div>
 						</div>
 					</div>
 					<iframe id="frame" name="frame" width="100%" height="100%"></iframe>
 				</div>
-				<div class="app-window the-fifteen-game-window window">
+				<div id="1" class="app-window the-fifteen-game-window window">
 					<div class="window-header uncopied-text">
 						<div class="window-title">
 							<img src="icons/fifteen.png" alt="fifteen-logo" /> <span>The 15 puzzle game</span>
 						</div>
 						<div class="window-btns">
-							<div class="btn">_</div>
+							<div class="btn minimize">_</div>
 							<div class="btn">Ο</div>
 							<div class="btn close">X</div>
 						</div>
@@ -125,7 +125,10 @@
 			</div>
 		</main>
 		<footer class="taskbar window uncopied-text">
-			<button class="start btn"><img src="icons/windows-logo.png" alt="logo" /><b>Start</b></button>
+			<div class="taskbar__left">
+				<button class="taskbar__item start btn"><img src="icons/windows-logo.png" alt="logo" /><b>Start</b></button>
+				<div class="taskbar__tasks"></div>
+			</div>
 			<div class="time" title="Current time"></div>
 		</footer>
 		<script src="./js/script.js"></script>

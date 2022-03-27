@@ -125,7 +125,8 @@ function popUp(textClass, string, sound) {
 	popUpEl.innerHTML = string;
 	fifteen.appendChild(popUpEl);
 	setTimeout(() => {
-		location.reload();
+		document.querySelector(".popUp").remove();
+		startGame();
 	}, 7000);
 }
 // ===========================================================================================
@@ -265,6 +266,7 @@ function getRow(array) {
 // SORT
 function sort() {
 	const arrayEl = board.querySelectorAll(".item");
+	// COMMENT IT FOR TEST
 	const map = [...arrayEl].map((x) => +x.getAttribute("data-startPosition"));
 	let n = 0;
 	while (n < 100) {
@@ -279,6 +281,7 @@ function sort() {
 			n++;
 		}
 	}
+	// COMMENT IT FOR TEST
 	// const map = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 15];
 	currentGameArray = map;
 	console.log(map);
