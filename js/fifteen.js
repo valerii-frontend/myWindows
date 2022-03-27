@@ -294,6 +294,7 @@ function sort() {
 		element.innerText = Number(map[i]);
 		element.setAttribute("title", Number(map[i]));
 		if (map[i] == 16) {
+			element.classList.remove("place");
 			element.classList.add("empty");
 			element.innerText = "";
 		}

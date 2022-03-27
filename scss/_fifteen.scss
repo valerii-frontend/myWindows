@@ -171,6 +171,7 @@
 		&.empty {
 			border: 0;
 			background: none;
+
 			&:hover {
 				background: none;
 				opacity: 0.7;
@@ -181,7 +182,7 @@
 			// background: rgba(173, 255, 157, 0.8);
 			color: silver;
 			background: #007400;
-			&.place {
+			&.empty {
 				border: 0;
 				background: none;
 			}

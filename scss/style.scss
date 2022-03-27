@@ -138,12 +138,14 @@ body {
 	justify-content: center;
 	width: 75%;
 	height: 75%;
+	pointer-events: none;
 	&.active {
 		transform: translate(-50%, -50%) scale(1);
 	}
 }
 .app-window {
 	display: none;
+	pointer-events: all;
 	&.active {
 		display: block;
 	}
@@ -242,13 +244,13 @@ body {
 	align-items: center;
 	justify-content: center;
 	.btn {
-		width: 16px;
-		height: 16px;
-		font-weight: 700;
+		width: 24px;
+		height: 24px;
+		font-weight: 900;
 		color: black;
-		padding: 2px;
-		font-size: 11px;
-		margin-right: 3px;
+		padding: 4px;
+		font-size: 15px;
+		margin-right: 4px;
 	}
 }
 @import "fifteen";
