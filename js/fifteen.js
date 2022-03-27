@@ -266,7 +266,7 @@ function getRow(array) {
 // SORT
 function sort() {
 	const arrayEl = board.querySelectorAll(".item");
-	// COMMENT IT FOR TEST
+	// COMMENT IT FOR TEST	/*
 	const map = [...arrayEl].map((x) => +x.getAttribute("data-startPosition"));
 	let n = 0;
 	while (n < 100) {
@@ -281,13 +281,16 @@ function sort() {
 			n++;
 		}
 	}
-	// COMMENT IT FOR TEST
+
+	// COMMENT IT FOR TEST   */
 	// const map = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 15];
 	currentGameArray = map;
 	console.log(map);
 	arrayEl.forEach((element, i) => {
 		element.setAttribute("data-startPosition", map[i]);
 		element.setAttribute("data-currentPlace", i + 1);
+		if (element.getAttribute("data-startPosition") == element.getAttribute("data-currentPlace"))
+			element.classList.add("place");
 		element.innerText = Number(map[i]);
 		element.setAttribute("title", Number(map[i]));
 		if (map[i] == 16) {
