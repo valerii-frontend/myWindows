@@ -22,7 +22,7 @@ let appsList = [
 		isOpen: false,
 	},
 ];
-// #eal time function
+// #Real time function
 function getTime() {
 	let date = new Date();
 	let time = document.querySelector(".time");
@@ -52,6 +52,12 @@ function createTask(src, title, id) {
 	let task = document.createElement("div");
 	task.classList.add("taskbar__item");
 	task.classList.add("btn");
+	let allTasks = document.querySelectorAll(".taskbar__item");
+	if (allTasks.length > 0) {
+		allTasks.forEach((task) => {
+			task.classList.remove("current");
+		});
+	}
 	task.classList.add("current");
 	task.setAttribute("data-id", id);
 	task.innerHTML = `<img src="${src}" alt="${title}" /> ${title}`;
